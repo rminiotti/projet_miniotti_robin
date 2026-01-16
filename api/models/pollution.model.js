@@ -10,29 +10,47 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING,
       allowNull: false
     },
+    discoveredBy: {
+      type: Sequelize.STRING,
+      allowNull: false
+    },
     lieu: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
+      allowNull: false
     },
     date_observation: {
-      type: Sequelize.DATE
+      type: Sequelize.DATE,
+      allowNull: false
     },
     type_pollution: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
+      allowNull: false
     },
     description: {
-      type: Sequelize.TEXT
+      type: Sequelize.TEXT,
+      allowNull: false
     },
     latitude: {
-      // stocke les coordonnées GPS avec 6 décimales
-      type: Sequelize.DECIMAL(9,6)
+      type: Sequelize.DECIMAL(9,6),
+      allowNull: false
     },
     longitude: {
-      type: Sequelize.DECIMAL(9,6)
+      type: Sequelize.DECIMAL(9,6),
+      allowNull: false
     },
     photo_url: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
+      allowNull: true
+    },
+    photo_base_64: {
+      type: Sequelize.TEXT,
+      allowNull: true
+    },
+    photo_mime_type: {
+      type: Sequelize.STRING,
+      allowNull: true
     }
   });
 
   return Pollution;
-};
+}; 
