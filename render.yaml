@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: angular-node-monorepo
+    name: pollution-api
     env: docker
     dockerContext: .
     plan: free
